@@ -27,6 +27,7 @@ function getRandomQuote() {
     return quotes[randomNumber];
 };
 
+
 /***
  * `printQuote` function
 ***/
@@ -37,7 +38,10 @@ function printQuote () {
   `<p class="quote">${randomQuote.quote}</p>
   <p class="source">${randomQuote.author}<span class="citation">${randomQuote.citation}</span>
   <span class="year">${randomQuote.year}</span></p>`
+
+  document.querySelector('div').innerHTML = html;
 };
+
 
 /***
  * click event listener for the print quote button
