@@ -11,11 +11,27 @@ project 1 - A Random Quote Generator
  * `quotes` array 
 ***/
 const quotes = [
-  { quote: 'test', author: 'test', citation: 'test', year: 'test'},
-  { quote: 'test2', author: 'test2',citation: 'test2', year: 'test2' },
-  { quote: 'test3', author: 'test3', citation: 'test3', year: 'test3'},
-  { quote: 'test4', author: 'test4', citation: 'test4', year: 'test4'},
-  { quote: 'test5', author: 'test5', citation: 'test5', year: 'test5'}
+  { quote: 'Be Yourself; Everyone Else is Already Taken', 
+    author: 'Oscar Wilde', 
+    citation: 'De Profundis', 
+    year: '1905'
+  },
+  { quote: 'Be The Change You Want To See In The World', 
+    author: 'Mahatma Gandhi',
+    citation: 'test2', 
+    year: 'test2' },
+  { quote: 'We Accept The Love We Think We Deserve', 
+    author: 'Stephen Chbosky', 
+    citation: 'The Perks of Being A Wallflower',
+    year: '1999'},
+  { quote: "I Have Not Failed. I've just found 10,000 Ways That Won't Work", 
+    author: 'Thomas A. Edison', 
+    citation: 'test4', 
+    year: 'test4'},
+  { quote: "It's Never Too Late To Be What You Might Have Been", 
+    author: 'George Eliot', 
+    citation: 'Illinios School Journal', 
+    year: '1884'}
 ];
 
 
@@ -36,7 +52,9 @@ function printQuote () {
   let randomQuote = getRandomQuote();
   html +=
   `<p class="quote">${randomQuote.quote}</p>
-  <p class="source">${randomQuote.author}<span class="citation">${randomQuote.citation}</span>
+  <p class="source">${randomQuote.author}
+  
+  <span class="citation">${randomQuote.citation}</span>
   <span class="year">${randomQuote.year}</span></p>`
 
   document.querySelector('div').innerHTML = html;
