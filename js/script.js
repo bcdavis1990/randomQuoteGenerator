@@ -18,16 +18,14 @@ const quotes = [
   },
   { quote: 'Be The Change You Want To See In The World', 
     author: 'Mahatma Gandhi',
-    citation: 'test2', 
-    year: 'test2' },
+  },
   { quote: 'We Accept The Love We Think We Deserve', 
     author: 'Stephen Chbosky', 
     citation: 'The Perks of Being A Wallflower',
     year: '1999'},
   { quote: "I Have Not Failed. I've just found 10,000 Ways That Won't Work", 
     author: 'Thomas A. Edison', 
-    citation: 'test4', 
-    year: 'test4'},
+  },
   { quote: "It's Never Too Late To Be What You Might Have Been", 
     author: 'George Eliot', 
     citation: 'Illinios School Journal', 
@@ -52,12 +50,17 @@ function printQuote () {
   let randomQuote = getRandomQuote();
   html +=
   `<p class="quote">${randomQuote.quote}</p>
-  <p class="source">${randomQuote.author}
+  <p class="source">${randomQuote.author}`
   
-  <span class="citation">${randomQuote.citation}</span>
-  <span class="year">${randomQuote.year}</span></p>`
+  if ('citation' in randomQuote) {
+     html += `<span class="citation"> ${randomQuote.citation} </span>`;
+  }
 
-  document.querySelector('div').innerHTML = html;
+  if ('year' in randomQuote) {
+    html += `<span class="year"> ${randomQuote.year} </span>`;
+}
+  
+ document.querySelector('div').innerHTML = html;
 };
 
 
