@@ -23,7 +23,7 @@ const quotes = [
     source: 'Stephen Chbosky', 
     citation: 'The Perks of Being A Wallflower',
     year: '1999'},
-  { quote: "I Have Not Failed. I've just found 10,000 Ways That Won't Work", 
+  { quote: "I Have Not Failed. I've Just Found 10,000 Ways That Won't Work", 
     source: 'Thomas A. Edison', 
   },
   { quote: "It's Never Too Late To Be What You Might Have Been", 
