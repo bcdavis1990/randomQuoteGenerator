@@ -12,22 +12,22 @@ project 1 - A Random Quote Generator
 ***/
 const quotes = [
   { quote: 'Be Yourself; Everyone Else is Already Taken', 
-    author: 'Oscar Wilde', 
+    source: 'Oscar Wilde', 
     citation: 'De Profundis', 
     year: '1905'
   },
   { quote: 'Be The Change You Want To See In The World', 
-    author: 'Mahatma Gandhi',
+    source: 'Mahatma Gandhi',
   },
   { quote: 'We Accept The Love We Think We Deserve', 
-    author: 'Stephen Chbosky', 
+    source: 'Stephen Chbosky', 
     citation: 'The Perks of Being A Wallflower',
     year: '1999'},
   { quote: "I Have Not Failed. I've just found 10,000 Ways That Won't Work", 
-    author: 'Thomas A. Edison', 
+    source: 'Thomas A. Edison', 
   },
   { quote: "It's Never Too Late To Be What You Might Have Been", 
-    author: 'George Eliot', 
+    source: 'George Eliot', 
     citation: 'Illinios School Journal', 
     year: '1884'}
 ];
@@ -36,6 +36,8 @@ const quotes = [
 /***
  * `getRandomQuote` function
 ***/
+
+//code that pulls the Random Quote
 function getRandomQuote() {
   let randomNumber = Math.floor( Math.random() * (quotes.length));
     return quotes[randomNumber];
@@ -45,21 +47,25 @@ function getRandomQuote() {
 /***
  * `printQuote` function
 ***/
+
+//function that prints the Random Quote to the page
 function printQuote () {
   let html = '';
   let randomQuote = getRandomQuote();
   html +=
   `<p class="quote">${randomQuote.quote}</p>
-  <p class="source">${randomQuote.author}`
+  <p class="source">${randomQuote.source}`
   
+  //runs if the quote includes a citation
   if ('citation' in randomQuote) {
      html += `<span class="citation"> ${randomQuote.citation} </span>`;
   }
 
+  //runs if the quote includes a year
   if ('year' in randomQuote) {
     html += `<span class="year"> ${randomQuote.year} </span>`;
 }
-  
+  //targets the 'div' element where the original quote existed
  document.querySelector('div').innerHTML = html;
 };
 
