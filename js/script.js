@@ -70,7 +70,7 @@ function printQuote() {
     html += `<span class="year"> ${randomQuote.year} </span>`;
   }
   //targets the 'div class="container"' element where the original quote existed
-  document.querySelector("div").innerHTML = html;
+  document.querySelector(".container").innerHTML = html;
 }
 
 /***
