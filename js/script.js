@@ -65,7 +65,7 @@ function printQuote () {
   if ('year' in randomQuote) {
     html += `<span class="year"> ${randomQuote.year} </span>`;
 }
-  //targets the 'div class="container' element where the original quote existed
+  //targets the 'div class="container"' element where the original quote existed
  document.querySelector('div').innerHTML = html;
 };
 
