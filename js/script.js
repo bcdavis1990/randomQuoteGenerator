@@ -73,11 +73,22 @@ function printQuote() {
   document.getElementById("quote-box").innerHTML = html;
 }
 
+function changeColor() {
+  var x = Math.floor(Math.random() * 256);
+  var y = Math.floor(Math.random() * 256);
+  var z = Math.floor(Math.random() * 256);
+  var bgColor = `#${x + y + z}`;
+  console.log(bgColor);
+
+  const div = document.getElementById("load-quote").parentElement.parentElement;
+  div.style.backgroundColor = bgColor;
+}
+
 /***
  * click event listener for the print quote button
  * DO NOT CHANGE THE CODE BELOW!!
  ***/
 
-document
-  .getElementById("load-quote")
-  .addEventListener("click", printQuote, false);
+document.getElementById("load-quote").addEventListener("click", printQuote);
+
+document.getElementById("load-quote").addEventListener("click", changeColor);
