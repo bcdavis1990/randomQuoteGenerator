@@ -94,3 +94,4 @@ document.getElementById("load-quote").addEventListener("click", printQuote);
 document.getElementById("load-quote").addEventListener("click", changeColor);
 
 //random code commenting for testing git
+//here is even more code for another commit
